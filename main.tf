@@ -1,12 +1,12 @@
 locals {
-  vpc_id = var.vpc_id != null ? var.vpc_id : null
+  endpoint_vpc_id = var.endpoint_vpc_id != null ? var.endpoint_vpc_id : null
 }
 
 resource "aws_vpc_endpoint" "primary" {
   service_name      = var.destination_service_name
   subnet_ids        = var.subnet_ids
   vpc_endpoint_type = "Interface"
-  vpc_id            = local.vpc_id
+  vpc_id            = local.endpoint_vpc_id
 
   tags = {
     Name = var.endpoint_name
@@ -17,7 +17,7 @@ resource "aws_route53_zone" "private" {
   name = var.domain_name
 
   vpc {
-    vpc_id = local.vpc_id
+    vpc_id = local.endpoint_vpc_id
   }
 }
 

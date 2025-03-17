@@ -14,7 +14,7 @@ variable "subnet_ids" {
   type = list(string)
 }
 
-variable "vpc_id" {
+variable "endpoint_vpc_id" {
   description = "VPC that the endpoint will be created in."
   type = string
 }
