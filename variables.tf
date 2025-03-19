@@ -20,13 +20,12 @@ variable "endpoint_vpc_id" {
 }
 
 variable "region" {
-  description = "value"
+  description = "AWS region to deploy the resources in."
   type = string
-  default = "us-east-2"
 }
 
 variable "domain_name" {
-  description = "DNS domain where the W&B Server lives."
+  description = "DNS domain of the W&B Server."
   type = string
 }
 
