@@ -3,7 +3,9 @@
 This module can be used to spin up the client side Private Link Endpoint to connect to the W&B Server side Private Link Endpoint Service.
 
 ## Requirements
-You will need to have Terraform v1.10.0 or greater installed to use this module.
+- Terraform >= 1.10.0
+- AWS Provider >= 5.91.0
+- AWS Credentials
 
 This module also requires that the Private Link Endpoint and Endpoint service is configured in the account where the W&B server is deployed.
 
