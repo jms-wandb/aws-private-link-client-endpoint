@@ -33,3 +33,15 @@ variable "subdomain" {
   description = "Subdomain of the W&B Server"
   type = string
 }
+
+variable "allowed_inbound_cidrs" {
+  description = "List of allowed inbound IPv4 CIDRs"
+  type =  list(string)
+  default= [ "0.0.0.0/0" ] 
+}
+
+variable "allowed_outbound_cidrs" {
+  description = "List of allowed outbound IPv4 CIDRs"
+  type =  list(string)
+  default= [ "0.0.0.0/0" ] 
+}
